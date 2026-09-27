@@ -1,0 +1,72 @@
+/* Fix unwanted empty space */
+main, section, div {
+    min-height: auto !important;
+}
+main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Fix dark mode text visibility */
+.dark body {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+}
+
+/* Backgrounds */
+.dark .bg-surface {
+    background-color: #0f172a !important;
+}
+.dark .bg-surface-container-low,
+.dark .bg-surface-container,
+.dark .bg-surface-container-high,
+.dark .bg-surface-container-highest,
+.dark .bg-surface-variant {
+    background-color: #1e293b !important;
+}
+.dark .bg-primary-container {
+    background-color: #3730a3 !important;
+}
+.dark .bg-surface.backdrop-blur-xl {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Text */
+.dark .text-on-surface,
+.dark .text-on-surface-variant,
+.dark .text-on-background {
+    color: #f8fafc !important;
+}
+.dark .text-on-primary-container {
+    color: #e0e7ff !important;
+}
+.dark .text-outline,
+.dark .text-outline-variant {
+    color: #94a3b8 !important;
+}
+
+/* Borders */
+.dark .border-outline-variant\/10,
+.dark .border-outline-variant\/20,
+.dark .border-outline-variant,
+.dark .border-outline,
+.dark .border-t {
+    border-color: #334155 !important;
+}
+
+/* Shadows and Borders */
+.dark [class*="shadow-["] {
+    box-shadow: none !important;
+    border: 1px solid #334155 !important;
+}
+
+/* Inputs */
+.dark input.bg-surface {
+    background-color: #1e293b !important;
+    border: 1px solid #475569 !important;
+    color: #f8fafc !important;
+}
+
+/* Nav Header */
+.nav-header { background-color: #ffffff; }
+.dark .nav-header { background-color: #0f172a !important; border-bottom: 1px solid #1e293b; }
