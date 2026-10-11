@@ -2,9 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlBtn = document.getElementById('rtl-btn');
     const themeBtn = document.getElementById('theme-btn');
 
-    // RTL Persistence
-    const savedDir = localStorage.getItem('dir') || 'ltr';
-    document.documentElement.dir = savedDir;
+    // Sync button icons with current html state
+    const isDark = document.documentElement.classList.contains('dark');
+    if (themeBtn) {
+        const span = themeBtn.querySelector('span');
+        if (span) span.textContent = isDark ? 'light_mode' : 'dark_mode';
+    }
 
     if (rtlBtn) {
         rtlBtn.addEventListener('click', () => {
@@ -15,26 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Theme Persistence
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        if (themeBtn) {
-            const span = themeBtn.querySelector('span');
-            if(span) span.textContent = 'light_mode';
-        }
-    }
-
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            const isDark = document.documentElement.classList.toggle('dark');
+            const isDarkNow = document.documentElement.classList.toggle('dark');
             const span = themeBtn.querySelector('span');
-            if (isDark) {
+            if (isDarkNow) {
                 localStorage.setItem('theme', 'dark');
-                if(span) span.textContent = 'light_mode';
+                if (span) span.textContent = 'light_mode';
             } else {
                 localStorage.setItem('theme', 'light');
-                if(span) span.textContent = 'dark_mode';
+                if (span) span.textContent = 'dark_mode';
             }
         });
     }
