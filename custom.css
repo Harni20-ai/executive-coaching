@@ -7,7 +7,7 @@ main {
     margin-bottom: 0 !important;
 }
 
-/* Fix dark mode text visibility */
+/* Fix dark mode background and text visibility */
 html.dark {
     background-color: #0f172a !important;
     color-scheme: dark;
@@ -17,7 +17,7 @@ html.dark body, .dark body {
     color: #e2e8f0 !important;
 }
 
-/* Backgrounds */
+/* Dark mode backgrounds */
 .dark .bg-surface {
     background-color: #0f172a !important;
 }
@@ -45,7 +45,7 @@ html.dark body, .dark body {
     background-color: rgba(15, 23, 42, 0.8) !important;
 }
 
-/* Text */
+/* Dark mode text colors & high contrast */
 .dark .text-on-surface,
 .dark .text-on-surface-variant,
 .dark .text-on-background {
@@ -59,7 +59,29 @@ html.dark body, .dark body {
     color: #94a3b8 !important;
 }
 
-/* Borders */
+/* Issue 3 Fix: High contrast blue/primary text in Dark Mode */
+.dark .text-primary,
+.dark a.text-primary,
+.dark span.text-primary,
+.dark button.text-primary {
+    color: #818cf8 !important; /* High-contrast crisp indigo/blue */
+}
+.dark .text-xs.text-primary,
+.dark .text-\[10px\].text-primary,
+.dark .text-\[11px\].text-primary,
+.dark .font-semibold.text-primary,
+.dark .font-bold.text-primary,
+.dark .tracking-wider.text-primary,
+.dark .tracking-widest.text-primary {
+    color: #93c5fd !important; /* Bright high-contrast light blue for small labels/badges */
+}
+.dark a.text-primary:hover,
+.dark .hover\:text-primary:hover,
+.dark button.text-primary:hover {
+    color: #c7d2fe !important;
+}
+
+/* Dark mode borders */
 .dark .border-outline-variant\/10,
 .dark .border-outline-variant\/20,
 .dark .border-outline-variant,
@@ -75,13 +97,124 @@ html.dark body, .dark body {
 }
 
 /* Inputs */
-.dark input.bg-surface, .dark textarea.bg-surface {
+.dark input.bg-surface,
+.dark textarea.bg-surface,
+.dark select.bg-surface {
     background-color: #1e293b !important;
     border: 1px solid #475569 !important;
     color: #f8fafc !important;
 }
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #94a3b8 !important;
+}
 
 /* Nav Header */
-.nav-header { background-color: #ffffff; }
-.dark .nav-header { background-color: #0f172a !important; border-bottom: 1px solid #1e293b; }
+.nav-header {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.dark .nav-header {
+    background-color: #0f172a !important;
+    border-bottom: 1px solid #1e293b !important;
+}
 
+/* Issue 1 & 2: Active Navigation State & Dropdown Contrast */
+.nav-link {
+    transition: all 0.2s ease;
+}
+.nav-link.nav-active {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35) !important;
+}
+.dark .nav-link.nav-active {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(79, 70, 229, 0.4) !important;
+}
+
+/* Header Dropdown Container & Items */
+.nav-dropdown {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08) !important;
+}
+.dark .nav-dropdown {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5) !important;
+}
+.nav-dropdown-item {
+    color: #334155;
+    transition: all 0.15s ease;
+}
+.nav-dropdown-item:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+}
+.dark .nav-dropdown-item {
+    color: #cbd5e1 !important;
+}
+.dark .nav-dropdown-item:hover {
+    background-color: #334155 !important;
+    color: #ffffff !important;
+}
+.nav-dropdown-item.active {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+.dark .nav-dropdown-item.active {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+}
+
+/* Issue Responsiveness 1: Mobile Nav Drawer */
+.mobile-nav-panel {
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, transform 0.25s ease;
+}
+.mobile-nav-panel.menu-closed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    overflow: hidden;
+}
+.mobile-nav-panel.menu-open {
+    max-height: 600px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Issue Responsiveness 4: Dashboard Mobile Sidebar Drawer */
+.dashboard-sidebar-drawer {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+.dashboard-sidebar-drawer.drawer-closed {
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+html[dir="rtl"] .dashboard-sidebar-drawer.drawer-closed {
+    transform: translateX(100%);
+    visibility: hidden;
+}
+.dashboard-sidebar-drawer.drawer-open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Dashboard Sidebar Active Tab */
+.sidebar-link.active-tab {
+    background-color: #e2e4ea !important;
+    color: #0f172a !important;
+    font-weight: 600 !important;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.06), inset -2px -2px 5px rgba(255,255,255,0.7) !important;
+}
+.dark .sidebar-link.active-tab {
+    background-color: #334155 !important;
+    color: #f8fafc !important;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3) !important;
+}

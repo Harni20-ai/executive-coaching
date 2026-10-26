@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <script>
 (function(){
   const t = localStorage.getItem('theme');
@@ -12,635 +13,783 @@
     document.documentElement.dir = 'rtl';
   }
 })();
-</script><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"tertiary": "#7c3aed", "secondary-container": "#d8dae6", "on-tertiary-fixed-variant": "#5b21b6", "secondary-fixed": "#d8dae6", "surface": "#e8eaf0", "secondary": "#6c6e7e", "on-primary": "#ffffff", "on-error-container": "#991b1b", "on-secondary-fixed": "#1a1b26", "tertiary-container": "#a78bfa", "on-primary-container": "#e0e2ff", "surface-container-low": "#e5e7ed", "on-secondary-container": "#585a68", "surface-container-highest": "#d6d8de", "surface-bright": "#edeef4", "on-tertiary": "#ffffff", "inverse-primary": "#a5b4fc", "on-error": "#ffffff", "on-primary-fixed-variant": "#4338ca", "outline-variant": "#d0d2dc", "surface-container": "#e2e4ea", "surface-container-high": "#dcdee4", "tertiary-fixed-dim": "#c4b5fd", "primary-fixed": "#e0e2ff", "error-container": "#fee2e2", "inverse-on-surface": "#e8eaf0", "secondary-fixed-dim": "#b8baca", "surface-dim": "#d4d6dc", "on-surface": "#2e3040", "on-secondary-fixed-variant": "#404252", "primary-fixed-dim": "#a5b4fc", "on-tertiary-fixed": "#2e1065", "on-surface-variant": "#585a68", "background": "#e8eaf0", "inverse-surface": "#2e3040", "surface-variant": "#dcdee4", "on-tertiary-container": "#3b1f63", "error": "#dc2626", "primary-container": "#818cf8", "outline": "#8a8c9a", "on-background": "#2e3040", "tertiary-fixed": "#ede9fe", "on-secondary": "#ffffff", "surface-container-lowest": "#f0f2f8", "primary": "#6366f1", "on-primary-fixed": "#1e1b4b", "surface-tint": "#6366f1"}, "borderRadius": {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"}, "spacing": {}, "fontFamily": {"headline": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"]}, "fontSize": {}}}};</script><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="custom.css" rel="stylesheet"/><title>Elevate Leadership | Dashboard</title><link href="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BGb7iBKcGa5xknjUBGX2S188qcZGKaUJohWnqIYxWaxCNz-plOLYThqiRboBKJxe2bRaj_Zq9W5pthY09tp5zH53zhNSFRWAqIgwnwTnAsAey9AOLlhvOce0tEri0ITZGesDRLKwoSugd4-WdoEy3lq9vYxzgykm5Wv4rkpnK6hJK2UrA12uYDWVmk5m_0IYSy5X7ybM9rK7iKwg9N0DrpUu7utVH1cTgJUYMAPtU-yHRUM13Nxd" rel="icon"/></head><body class="bg-surface font-body text-on-surface"><header class="fixed top-0 w-full z-50 bg-white shadow-sm transition-colors nav-header"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-4"><a class="flex items-center gap-4" href="index.html"><img alt="Elevate Leadership Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BGb7iBKcGa5xknjUBGX2S188qcZGKaUJohWnqIYxWaxCNz-plOLYThqiRboBKJxe2bRaj_Zq9W5pthY09tp5zH53zhNSFRWAqIgwnwTnAsAey9AOLlhvOce0tEri0ITZGesDRLKwoSugd4-WdoEy3lq9vYxzgykm5Wv4rkpnK6hJK2UrA12uYDWVmk5m_0IYSy5X7ybM9rK7iKwg9N0DrpUu7utVH1cTgJUYMAPtU-yHRUM13Nxd"/><span class="text-xl font-headline font-semibold text-on-surface">Elevate</span></a></div><nav class="hidden lg:flex items-center gap-6" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg">
-<div class="relative group">
-<button class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2 flex items-center gap-1" id="home-dropdown-btn">
-    Home
-    <span class="material-symbols-outlined text-[18px]">expand_more</span>
-</button>
-<div class="absolute left-0 top-full mt-2 w-48 bg-surface border border-outline-variant rounded-lg shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all flex flex-col p-2 z-50">
-<a class="px-3 py-2 text-sm rounded-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" href="index.html">Home 1</a>
-<a class="px-3 py-2 text-sm rounded-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface" href="home_2_-_leadership_transformation.html">Home 2</a>
-</div>
-</div>
-<a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" href="about.html">About</a>
-<a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" data-path="services" href="services.html">Services</a>
-<a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" data-path="coaches" href="coaches.html">Coaches</a>
-<a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" data-path="case-studies" href="case_studies.html">Case Studies</a>
-<a class="text-sm text-on-surface-variant hover:text-on-surface transition-colors px-3 py-2" href="contact.html">Contact</a>
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"tertiary": "#7c3aed", "secondary-container": "#d8dae6", "on-tertiary-fixed-variant": "#5b21b6", "secondary-fixed": "#d8dae6", "surface": "#e8eaf0", "secondary": "#6c6e7e", "on-primary": "#ffffff", "on-error-container": "#991b1b", "on-secondary-fixed": "#1a1b26", "tertiary-container": "#a78bfa", "on-primary-container": "#e0e2ff", "surface-container-low": "#e5e7ed", "on-secondary-container": "#585a68", "surface-container-highest": "#d6d8de", "surface-bright": "#edeef4", "on-tertiary": "#ffffff", "inverse-primary": "#a5b4fc", "on-error": "#ffffff", "on-primary-fixed-variant": "#4338ca", "outline-variant": "#d0d2dc", "surface-container": "#e2e4ea", "surface-container-high": "#dcdee4", "tertiary-fixed-dim": "#c4b5fd", "primary-fixed": "#e0e2ff", "error-container": "#fee2e2", "inverse-on-surface": "#e8eaf0", "secondary-fixed-dim": "#b8baca", "surface-dim": "#d4d6dc", "on-surface": "#2e3040", "on-secondary-fixed-variant": "#404252", "primary-fixed-dim": "#a5b4fc", "on-tertiary-fixed": "#2e1065", "on-surface-variant": "#585a68", "background": "#e8eaf0", "inverse-surface": "#2e3040", "surface-variant": "#dcdee4", "on-tertiary-container": "#3b1f63", "error": "#dc2626", "primary-container": "#818cf8", "outline": "#8a8c9a", "on-background": "#2e3040", "tertiary-fixed": "#ede9fe", "on-secondary": "#ffffff", "surface-container-lowest": "#f0f2f8", "primary": "#6366f1", "on-primary-fixed": "#1e1b4b", "surface-tint": "#6366f1"}, "borderRadius": {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"}, "spacing": {}, "fontFamily": {"headline": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"]}, "fontSize": {}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="custom.css" rel="stylesheet"/>
+<title>Elevate Leadership | Executive Dashboard</title>
+<link href="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BGb7iBKcGa5xknjUBGX2S188qcZGKaUJohWnqIYxWaxCNz-plOLYThqiRboBKJxe2bRaj_Zq9W5pthY09tp5zH53zhNSFRWAqIgwnwTnAsAey9AOLlhvOce0tEri0ITZGesDRLKwoSugd4-WdoEy3lq9vYxzgykm5Wv4rkpnK6hJK2UrA12uYDWVmk5m_0IYSy5X7ybM9rK7iKwg9N0DrpUu7utVH1cTgJUYMAPtU-yHRUM13Nxd" rel="icon"/>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
 
-<a class="text-sm bg-primary-container text-on-primary-container font-semibold rounded-lg px-3 py-2" href="client_dashboard_-_elevate_leadership.html">Dashboard</a>
-</nav><div class="flex items-center gap-3"><button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface transition-all" id="rtl-btn"><span class="material-symbols-outlined text-[20px]">swap_horiz</span></button><button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface transition-all" id="theme-btn"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><a class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center hover:opacity-90 transition-opacity shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.6)]" href="client_login.html"><span class="material-symbols-outlined text-on-primary text-[20px]">person</span></a></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full min-h-screen bg-surface text-on-surface">
-<div class="flex flex-1 w-full max-w-7xl mx-auto">
-<!-- Persistent Left Sidebar -->
-<aside class="w-72 bg-surface flex flex-col justify-between p-6 shadow-[6px_0px_16px_rgba(0,0,0,0.04)] sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto z-40 hidden lg:flex">
-<div class="flex flex-col gap-8">
-<div class="flex items-center gap-3 px-2">
-<div class="w-10 h-10 rounded-xl bg-surface flex items-center justify-center shadow-[4px_4px_8px_rgba(0,0,0,0.08),-4px_-4px_8px_rgba(255,255,255,0.7)] text-primary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-</div>
-<span class="font-headline font-semibold text-lg text-on-surface tracking-tight">Elevate Leadership</span>
-</div>
-<nav class="flex flex-col gap-2">
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface font-semibold bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)]" data-target="overview" onclick="switchTab('overview')">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">dashboard</span>
-<span class="text-sm">Overview</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="sessions" onclick="switchTab('sessions')">
-<span class="material-symbols-outlined">calendar_today</span>
-<span class="text-sm">My Sessions</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="goals" onclick="switchTab('goals')">
-<span class="material-symbols-outlined">flag</span>
-<span class="text-sm">My Goals</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="progress" onclick="switchTab('progress')">
-<span class="material-symbols-outlined">monitoring</span>
-<span class="text-sm">My Progress</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="assessments" onclick="switchTab('assessments')">
-<span class="material-symbols-outlined">quiz</span>
-<span class="text-sm">Assessments</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="calendar" onclick="switchTab('calendar')">
-<span class="material-symbols-outlined">event_note</span>
-<span class="text-sm">Calendar</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="payments" onclick="switchTab('payments')">
-<span class="material-symbols-outlined">payments</span>
-<span class="text-sm">Payments</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="notifications" onclick="switchTab('notifications')">
-<span class="material-symbols-outlined">notifications</span>
-<span class="text-sm">Notifications</span>
-<span class="ml-auto bg-primary text-on-primary text-xs px-2 py-0.5 rounded-full font-semibold">3</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="settings" onclick="switchTab('settings')">
-<span class="material-symbols-outlined">settings</span>
-<span class="text-sm">Profile &amp; Settings</span>
-</button>
-<button class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:text-on-surface" data-target="support" onclick="switchTab('support')">
-<span class="material-symbols-outlined">support_agent</span>
-<span class="text-sm">Support</span>
-</button>
+  <!-- Dedicated Executive Dashboard Topbar (Replaces Public Website Header) -->
+  <header class="sticky top-0 z-40 w-full bg-white dark:bg-slate-900 border-b border-outline-variant/30 dark:border-slate-800 shadow-sm transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Left: Mobile Menu Toggle & Brand -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Hamburger Button for 360px & 768px (Issue Responsiveness 4) -->
+        <button id="dashboard-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-surface dark:bg-slate-800 shadow-[4px_4px_8px_rgba(0,0,0,0.06),-4px_-4px_8px_rgba(255,255,255,0.6)] text-on-surface hover:text-primary transition-all" aria-label="Toggle Dashboard Menu">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
 
-<a class="text-sm bg-primary-container text-on-primary-container font-semibold rounded-lg px-3 py-2" href="client_dashboard_-_elevate_leadership.html">Dashboard</a>
-</nav>
-</div>
-<!-- Client Profile Bottom -->
-<div class="pt-6 border-t border-outline-variant/20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<img class="w-10 h-10 rounded-xl object-cover shadow-[2px_2px_6px_rgba(0,0,0,0.1)]" data-alt="Professional headshot of Alex Mercer, an executive in a charcoal blazer smiling confidently in a modern sunlit corporate office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfpurC3ZEyFe1_TlEAnkODtOhG8gyQLwWi2_4eu3wsXyPGaASMFIcf8ksRPCFi42_wIJ1pTeuCTUBgzENKDHwnynI4ZW0u05VcakYjmmy4HngzcV01nohv8iyC2J49AdtG95wH-Hwb9HBJVduC6U4bAeuWRDkfgrdHmCMDFc76d2z96pN1z7wjNnzzPkys0yWIngcBV4q44W4O8_i2dE8tZrbEiP42Hz2uCQOV4ryp2XdqyIhIigVi"/>
-<div>
-<h4 class="text-sm font-semibold text-on-surface">Alex Mercer</h4>
-<p class="text-xs text-on-surface-variant">VP of Engineering</p>
-</div>
-</div>
-<button class="p-2 rounded-xl bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.08),-4px_-4px_8px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface" onclick="switchTab('settings')">
-<span class="material-symbols-outlined text-[18px]">logout</span>
-</button>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="flex-1 pt-6 pb-6 px-6 lg:pt-8 lg:pb-12 lg:px-12 overflow-y-auto">
-<!-- Top Header Summary Banner -->
-<div class="mb-8 p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col md:flex-row md:items-center justify-between gap-6">
-<div>
-<span class="text-xs uppercase tracking-wider text-primary font-semibold">Executive Dashboard</span>
-<h1 class="text-2xl lg:text-3xl font-headline font-semibold text-on-surface mt-1">Good morning, Alex.</h1>
-<p class="text-sm text-on-surface-variant mt-1">Your leadership development journey is progressing exceptionally well this quarter.</p>
-</div>
-<div class="flex items-center gap-3">
-<div class="relative">
-<input class="bg-surface py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-sm outline-none text-on-surface placeholder:text-outline w-48 lg:w-64 ltr:pl-4 ltr:pr-10 rtl:pr-4 rtl:pl-10" placeholder="Search insights..." type="text"/>
-<span class="material-symbols-outlined absolute ltr:right-3 rtl:left-3 top-2.5 text-outline text-[18px]">search</span>
-</div>
-<button class="p-2.5 rounded-xl bg-surface shadow-[4px_4px_8px_rgba(0,0,0,0.08),-4px_-4px_8px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface text-xs font-semibold" onclick="toggleRTL()">
-            RTL
+        <a class="flex items-center gap-3" href="client_dashboard_-_elevate_leadership.html">
+          <img alt="Elevate Leadership Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7BGb7iBKcGa5xknjUBGX2S188qcZGKaUJohWnqIYxWaxCNz-plOLYThqiRboBKJxe2bRaj_Zq9W5pthY09tp5zH53zhNSFRWAqIgwnwTnAsAey9AOLlhvOce0tEri0ITZGesDRLKwoSugd4-WdoEy3lq9vYxzgykm5Wv4rkpnK6hJK2UrA12uYDWVmk5m_0IYSy5X7ybM9rK7iKwg9N0DrpUu7utVH1cTgJUYMAPtU-yHRUM13Nxd"/>
+          <span class="text-xl font-headline font-semibold text-on-surface hidden sm:inline-block">Elevate</span>
+        </a>
+
+        <span class="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Executive Portal
+        </span>
+      </div>
+
+      <!-- Right: Search, Utilities & User Profile -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- RTL & Theme Toggles -->
+        <button class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-surface dark:bg-slate-800 shadow-[3px_3px_6px_rgba(0,0,0,0.06),-3px_-3px_6px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface transition-all" id="rtl-btn" title="Toggle RTL">
+          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+        </button>
+        <button class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-surface dark:bg-slate-800 shadow-[3px_3px_6px_rgba(0,0,0,0.06),-3px_-3px_6px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface transition-all" id="theme-btn" title="Toggle Theme">
+          <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+        </button>
+
+        <!-- Notification Bell -->
+        <button class="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-surface dark:bg-slate-800 shadow-[3px_3px_6px_rgba(0,0,0,0.06),-3px_-3px_6px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-on-surface transition-all" onclick="switchTab('notifications')" title="Notifications">
+          <span class="material-symbols-outlined text-[18px]">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span>
+        </button>
+
+        <!-- Divider -->
+        <div class="h-6 w-px bg-outline-variant/30 hidden sm:block"></div>
+
+        <!-- Alex Mercer Profile Badge -->
+        <div class="flex items-center gap-2.5 pl-1">
+          <img alt="Alex Mercer" class="w-9 h-9 rounded-xl object-cover shadow-[2px_2px_4px_rgba(0,0,0,0.1)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfpurC3ZEyFe1_TlEAnkODtOhG8gyQLwWi2_4eu3wsXyPGaASMFIcf8ksRPCFi42_wIJ1pTeuCTUBgzENKDHwnynI4ZW0u05VcakYjmmy4HngzcV01nohv8iyC2J49AdtG95wH-Hwb9HBJVduC6U4bAeuWRDkfgrdHmCMDFc76d2z96pN1z7wjNnzzPkys0yWIngcBV4q44W4O8_i2dE8tZrbEiP42Hz2uCQOV4ryp2XdqyIhIigVi"/>
+          <div class="hidden xl:block text-left">
+            <h4 class="text-xs font-semibold text-on-surface leading-tight">Alex Mercer</h4>
+            <p class="text-[10px] text-on-surface-variant leading-tight">VP Engineering</p>
+          </div>
+        </div>
+
+        <!-- Return to Website Link -->
+        <a class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface dark:bg-slate-800 text-xs font-semibold text-on-surface-variant hover:text-primary shadow-[3px_3px_6px_rgba(0,0,0,0.06),-3px_-3px_6px_rgba(255,255,255,0.6)] transition-all" href="index.html" title="Return to Main Website">
+          <span class="material-symbols-outlined text-[16px]">home</span>
+          <span class="hidden sm:inline">Website</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Drawer Backdrop (for 360px & 768px) -->
+  <div id="dashboard-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+
+  <!-- Mobile Offcanvas Sidebar Drawer (Issue Responsiveness 4) -->
+  <aside id="dashboard-sidebar" class="dashboard-sidebar-drawer drawer-closed fixed top-0 bottom-0 left-0 w-72 max-w-[85vw] bg-surface dark:bg-slate-900 border-r border-outline-variant/30 dark:border-slate-800 p-6 z-50 flex flex-col justify-between overflow-y-auto lg:hidden shadow-2xl">
+    <div class="flex flex-col gap-6">
+      <!-- Drawer Header with Close Button -->
+      <div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          </div>
+          <div>
+            <h3 class="font-headline font-semibold text-sm text-on-surface">Client Portal</h3>
+            <p class="text-[11px] text-on-surface-variant">Executive Navigation</p>
+          </div>
+        </div>
+        <button id="close-sidebar-btn" class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container-low text-on-surface hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="flex flex-col gap-1.5">
+        <button class="sidebar-link active-tab flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface font-semibold text-sm" data-target="overview" onclick="switchTab('overview')">
+          <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+          <span>Overview</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="sessions" onclick="switchTab('sessions')">
+          <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          <span>My Sessions</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="goals" onclick="switchTab('goals')">
+          <span class="material-symbols-outlined text-[20px]">flag</span>
+          <span>My Goals</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="progress" onclick="switchTab('progress')">
+          <span class="material-symbols-outlined text-[20px]">monitoring</span>
+          <span>My Progress</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="assessments" onclick="switchTab('assessments')">
+          <span class="material-symbols-outlined text-[20px]">quiz</span>
+          <span>Assessments</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="calendar" onclick="switchTab('calendar')">
+          <span class="material-symbols-outlined text-[20px]">event_note</span>
+          <span>Calendar</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="payments" onclick="switchTab('payments')">
+          <span class="material-symbols-outlined text-[20px]">payments</span>
+          <span>Payments</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="notifications" onclick="switchTab('notifications')">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span>Notifications</span>
+          <span class="ml-auto bg-primary text-white text-[11px] px-2 py-0.5 rounded-full font-semibold">3</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="settings" onclick="switchTab('settings')">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span>Profile &amp; Settings</span>
+        </button>
+        <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="support" onclick="switchTab('support')">
+          <span class="material-symbols-outlined text-[20px]">support_agent</span>
+          <span>Support</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Client Profile Drawer Bottom -->
+    <div class="pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img alt="Alex Mercer" class="w-10 h-10 rounded-xl object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfpurC3ZEyFe1_TlEAnkODtOhG8gyQLwWi2_4eu3wsXyPGaASMFIcf8ksRPCFi42_wIJ1pTeuCTUBgzENKDHwnynI4ZW0u05VcakYjmmy4HngzcV01nohv8iyC2J49AdtG95wH-Hwb9HBJVduC6U4bAeuWRDkfgrdHmCMDFc76d2z96pN1z7wjNnzzPkys0yWIngcBV4q44W4O8_i2dE8tZrbEiP42Hz2uCQOV4ryp2XdqyIhIigVi"/>
+        <div>
+          <h4 class="text-sm font-semibold text-on-surface">Alex Mercer</h4>
+          <p class="text-xs text-on-surface-variant">VP Engineering</p>
+        </div>
+      </div>
+      <a href="client_login.html" class="p-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors" title="Log Out">
+        <span class="material-symbols-outlined text-[18px]">logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Dashboard Main Layout Container -->
+  <div class="flex flex-1 w-full max-w-7xl mx-auto min-w-0">
+    
+    <!-- Persistent Desktop Left Sidebar -->
+    <aside class="w-64 bg-surface dark:bg-slate-900 border-r border-outline-variant/30 dark:border-slate-800 flex-col justify-between p-5 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto hidden lg:flex flex-shrink-0">
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3 px-2">
+          <div class="w-9 h-9 rounded-xl bg-surface flex items-center justify-center shadow-[3px_3px_6px_rgba(0,0,0,0.06),-3px_-3px_6px_rgba(255,255,255,0.7)] text-primary">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+          </div>
+          <span class="font-headline font-semibold text-base text-on-surface tracking-tight">Executive Advisory</span>
+        </div>
+        
+        <nav class="flex flex-col gap-1.5">
+          <button class="sidebar-link active-tab flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface font-semibold text-sm" data-target="overview" onclick="switchTab('overview')">
+            <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span>Overview</span>
           </button>
-</div>
-</div>
-<!-- TAB 1: OVERVIEW -->
-<div class="tab-content flex flex-col gap-8" id="tab-overview">
-<!-- Next Session Banner -->
-<div class="p-8 rounded-2xl bg-surface shadow-[8px_8px_16px_rgba(0,0,0,0.08),-8px_-8px_16px_rgba(255,255,255,0.8)] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative overflow-hidden">
-<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/5 rounded-full blur-2xl"></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-<span class="text-xs uppercase font-semibold text-primary">Upcoming Milestone</span>
-</div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Executive Coaching â€” Strategic Alignment</h2>
-<p class="text-sm text-on-surface-variant">Tuesday, 10:00 AM with Dr. Elena Vance</p>
-</div>
-<button class="px-6 py-3 rounded-xl bg-primary text-on-primary font-semibold text-sm shadow-[6px_6px_12px_rgba(0,0,0,0.1),-6px_-6px_12px_rgba(255,255,255,0.5)] hover:scale-[1.02] transition-all flex items-center gap-2" onclick="switchTab('sessions')">
-<span class="material-symbols-outlined text-[18px]">videocam</span>
-            Join Session
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="sessions" onclick="switchTab('sessions')">
+            <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            <span>My Sessions</span>
           </button>
-</div>
-<!-- Development Snapshot Stats -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-<div class="p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2">
-<span class="text-xs text-on-surface-variant font-medium">Overall Progress</span>
-<div class="flex items-baseline gap-2">
-<span class="text-3xl font-headline font-semibold text-on-surface">72%</span>
-<span class="text-xs text-primary font-semibold">+8% this mo</span>
-</div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)]">
-<div class="bg-primary h-full rounded-full" style="width: 72%;"></div>
-</div>
-</div>
-<div class="p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2">
-<span class="text-xs text-on-surface-variant font-medium">Active Goals</span>
-<span class="text-3xl font-headline font-semibold text-on-surface">4</span>
-<span class="text-xs text-on-surface-variant">2 due this quarter</span>
-</div>
-<div class="p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2">
-<span class="text-xs text-on-surface-variant font-medium">Completed Goals</span>
-<span class="text-3xl font-headline font-semibold text-on-surface">8</span>
-<span class="text-xs text-primary font-semibold">Exceeded target</span>
-</div>
-<div class="p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2">
-<span class="text-xs text-on-surface-variant font-medium">Sessions Completed</span>
-<span class="text-3xl font-headline font-semibold text-on-surface">12</span>
-<span class="text-xs text-on-surface-variant">4 remaining in tier</span>
-</div>
-<div class="p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2">
-<span class="text-xs text-on-surface-variant font-medium">Next Assessment</span>
-<span class="text-xl font-headline font-semibold text-on-surface mt-1">Oct 14</span>
-<span class="text-xs text-primary font-semibold">360Â° Review</span>
-</div>
-</div>
-<!-- Bento Grid: Current Goals & Recent Activity -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<!-- Current Goals Overview -->
-<div class="lg:col-span-2 p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<div class="flex items-center justify-between">
-<h3 class="font-headline font-semibold text-lg text-on-surface">Current Active Goals</h3>
-<button class="text-xs text-primary font-semibold hover:underline" onclick="switchTab('goals')">View All Goals</button>
-</div>
-<div class="flex flex-col gap-4">
-<div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<h4 class="text-sm font-semibold text-on-surface">Scale Engineering Organization to 150+</h4>
-<span class="text-xs font-semibold text-primary">85%</span>
-</div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
-</div>
-<p class="text-xs text-on-surface-variant">Target: Q4 Review â€¢ Coach note: Excellent hiring velocity achieved.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-3">
-<div class="flex items-center justify-between">
-<h4 class="text-sm font-semibold text-on-surface">Cross-functional Executive Presence &amp; Influence</h4>
-<span class="text-xs font-semibold text-primary">60%</span>
-</div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 60%;"></div>
-</div>
-<p class="text-xs text-on-surface-variant">Target: Nov 30 â€¢ Focus on board-level presentation narrative.</p>
-</div>
-</div>
-</div>
-<!-- Recent Activity Timeline -->
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-lg text-on-surface">Recent Activity</h3>
-<div class="flex flex-col gap-6 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/30">
-<div class="flex items-start gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs z-10 shadow-md">âœ“</div>
-<div>
-<h4 class="text-sm font-semibold text-on-surface">Goal Milestone Achieved</h4>
-<p class="text-xs text-on-surface-variant">Completed Q3 Hiring Plan</p>
-<span class="text-[10px] text-outline mt-1 block">Yesterday, 4:15 PM</span>
-</div>
-</div>
-<div class="flex items-start gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center text-xs z-10 shadow-[2px_2px_4px_rgba(0,0,0,0.1)]">ðŸ’¬</div>
-<div>
-<h4 class="text-sm font-semibold text-on-surface">Coach Session Note Added</h4>
-<p class="text-xs text-on-surface-variant">Dr. Elena Vance uploaded session notes.</p>
-<span class="text-[10px] text-outline mt-1 block">Oct 12, 11:30 AM</span>
-</div>
-</div>
-<div class="flex items-start gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface flex items-center justify-center text-xs z-10 shadow-[2px_2px_4px_rgba(0,0,0,0.1)]">ðŸ“Š</div>
-<div>
-<h4 class="text-sm font-semibold text-on-surface">Assessment Review</h4>
-<p class="text-xs text-on-surface-variant">Strategic thinking capability rated +12%.</p>
-<span class="text-[10px] text-outline mt-1 block">Oct 08, 2:00 PM</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- TAB 2: MY SESSIONS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-sessions">
-<div class="flex items-center justify-between">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Coaching Sessions</h2>
-<p class="text-sm text-on-surface-variant">Manage upcoming appointments or book new strategic check-ins.</p>
-</div>
-<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-semibold text-sm shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.5)]" onclick="openBookingModal()">Book Session</button>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Upcoming Sessions</h3>
-<div class="overflow-x-auto">
-<table class="w-full text-left text-sm text-on-surface">
-<thead class="text-xs text-on-surface-variant uppercase border-b border-outline-variant/20">
-<tr>
-<th class="pb-3 font-semibold">Session Type</th>
-<th class="pb-3 font-semibold">Coach</th>
-<th class="pb-3 font-semibold">Date &amp; Time</th>
-<th class="pb-3 font-semibold">Status</th>
-<th class="pb-3 font-semibold text-right">Actions</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant/10">
-<tr>
-<td class="py-4 font-medium">Strategic Alignment</td>
-<td class="py-4 text-on-surface-variant">Dr. Elena Vance</td>
-<td class="py-4 text-on-surface-variant">Oct 17, 2024 â€¢ 10:00 AM</td>
-<td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container text-on-primary-container">Confirmed</span></td>
-<td class="py-4 text-right flex items-center justify-end gap-2">
-<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-semibold shadow-sm">Join</button>
-<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-[2px_2px_4px_rgba(0,0,0,0.06),-2px_-2px_4px_rgba(255,255,255,0.6)]">Reschedule</button>
-</td>
-</tr>
-<tr>
-<td class="py-4 font-medium">Leadership Deep Dive</td>
-<td class="py-4 text-on-surface-variant">Marcus Sterling</td>
-<td class="py-4 text-on-surface-variant">Oct 24, 2024 â€¢ 02:00 PM</td>
-<td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">Scheduled</span></td>
-<td class="py-4 text-right flex items-center justify-end gap-2">
-<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-[2px_2px_4px_rgba(0,0,0,0.06),-2px_-2px_4px_rgba(255,255,255,0.6)]">Reschedule</button>
-<button class="px-3 py-1.5 rounded-lg bg-error-container text-on-error-container text-xs">Cancel</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Past Sessions &amp; Coach Notes</h3>
-<div class="flex flex-col gap-4">
-<div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-2">
-<div class="flex items-center justify-between">
-<h4 class="text-sm font-semibold text-on-surface">Stakeholder Management Framework</h4>
-<span class="text-xs text-on-surface-variant">Oct 10, 2024 â€¢ Dr. Elena Vance</span>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed">Discussed methods for aligning disparate engineering teams with product milestones. Alex demonstrated strong self-awareness regarding delegation bottlenecks.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- TAB 3: MY GOALS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-goals">
-<div class="flex items-center justify-between">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Development Goals</h2>
-<p class="text-sm text-on-surface-variant">Track your active objectives and milestone achievements.</p>
-</div>
-<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-semibold text-sm shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.5)]">+ New Goal</button>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container text-on-primary-container">Active</span>
-<span class="text-xs text-on-surface-variant">Target: Dec 15, 2024</span>
-</div>
-<h3 class="font-headline font-semibold text-base text-on-surface">Scale Engineering Organization to 150+</h3>
-<p class="text-xs text-on-surface-variant">Recruit key departmental leads and restructure reporting lines for optimal cross-team velocity.</p>
-<div class="flex flex-col gap-1.5">
-<div class="flex justify-between text-xs font-semibold"><span>Progress</span><span>85%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span class="text-xs text-on-surface-variant">Coach Note: Excellent velocity</span>
-<button class="text-xs font-semibold text-primary hover:underline">Update Progress</button>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4">
-<div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container text-on-primary-container">Active</span>
-<span class="text-xs text-on-surface-variant">Target: Nov 30, 2024</span>
-</div>
-<h3 class="font-headline font-semibold text-base text-on-surface">Cross-functional Executive Presence</h3>
-<p class="text-xs text-on-surface-variant">Enhance board-level communication and strategic storytelling for product launches.</p>
-<div class="flex flex-col gap-1.5">
-<div class="flex justify-between text-xs font-semibold"><span>Progress</span><span>60%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 60%;"></div>
-</div>
-</div>
-<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span class="text-xs text-on-surface-variant">Coach Note: Focus on brevity</span>
-<button class="text-xs font-semibold text-primary hover:underline">Update Progress</button>
-</div>
-</div>
-</div>
-</div>
-<!-- TAB 4: MY PROGRESS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-progress">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Leadership Progress &amp; Capabilities</h2>
-<p class="text-sm text-on-surface-variant">Detailed breakdown of competency metrics across your executive journey.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col items-center justify-center text-center gap-4">
-<h3 class="font-headline font-semibold text-base text-on-surface">Overall Development Index</h3>
-<div class="w-36 h-36 rounded-full bg-surface shadow-[inset_6px_6px_12px_rgba(0,0,0,0.08),inset_-6px_-6px_12px_rgba(255,255,255,0.6)] flex items-center justify-center flex-col">
-<span class="text-4xl font-headline font-semibold text-primary">72%</span>
-<span class="text-xs text-on-surface-variant mt-1">Advanced Tier</span>
-</div>
-<p class="text-xs text-on-surface-variant">Calculated from 360 evaluations, goal velocity, and coach feedback.</p>
-</div>
-<div class="lg:col-span-2 p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Capability Breakdown</h3>
-<div class="flex flex-col gap-4">
-<div class="flex flex-col gap-1">
-<div class="flex justify-between text-xs font-semibold text-on-surface"><span>Strategic Thinking</span><span>82%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 82%;"></div>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between text-xs font-semibold text-on-surface"><span>Communication</span><span>76%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 76%;"></div>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between text-xs font-semibold text-on-surface"><span>Executive Presence</span><span>78%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between text-xs font-semibold text-on-surface"><span>Delegation</span><span>61%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 61%;"></div>
-</div>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex justify-between text-xs font-semibold text-on-surface"><span>Influence</span><span>69%</span></div>
-<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-<div class="bg-primary h-full rounded-full" style="width: 69%;"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Coach Feedback Quotation -->
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-3 relative">
-<span class="text-4xl text-primary font-serif leading-none">â€œ</span>
-<p class="text-sm text-on-surface italic -mt-4">Alex has shown remarkable growth in strategic thinking and visionary alignment. Continued focus on delegation will unlock even higher organizational scale.</p>
-<span class="text-xs font-semibold text-on-surface-variant">â€” Dr. Elena Vance, Lead Executive Coach</span>
-</div>
-</div>
-<!-- TAB 5: ASSESSMENTS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-assessments">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Leadership Assessments</h2>
-<p class="text-sm text-on-surface-variant">Review your completed 360Â° evaluations and upcoming assessment milestones.</p>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<div class="flex items-center justify-between">
-<div>
-<span class="text-xs font-semibold text-primary">Completed Sept 12, 2026</span>
-<h3 class="font-headline font-semibold text-lg text-on-surface mt-1">360Â° Comprehensive Leadership Review</h3>
-</div>
-<button class="px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-semibold shadow-md">View Full Report</button>
-</div>
-<p class="text-xs text-on-surface-variant">Evaluated by 12 peers, direct reports, and executive stakeholders across 5 key capability pillars.</p>
-</div>
-</div>
-<!-- TAB 6: CALENDAR -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-calendar">
-<div class="flex items-center justify-between">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Schedule &amp; Calendar</h2>
-<p class="text-sm text-on-surface-variant">Interactive agenda of coaching sessions, goal milestones, and reviews.</p>
-</div>
-<div class="flex gap-2">
-<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface text-xs font-semibold shadow-[2px_2px_4px_rgba(0,0,0,0.06),-2px_-2px_4px_rgba(255,255,255,0.6)]">Month</button>
-<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.5)]">Week</button>
-<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-[inset_2px_2px_4px_rgba(0,0,0,0.06),inset_-2px_-2px_4px_rgba(255,255,255,0.5)]">Today</button>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<div class="grid grid-cols-7 gap-2 text-center text-xs font-semibold text-on-surface-variant pb-2 border-b border-outline-variant/20">
-<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-</div>
-<div class="grid grid-cols-7 gap-3 text-center text-sm">
-<div class="p-3 rounded-xl bg-surface text-outline">28</div>
-<div class="p-3 rounded-xl bg-surface text-outline">29</div>
-<div class="p-3 rounded-xl bg-surface text-outline">30</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">1</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">2</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">3</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">4</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">5</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">6</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">7</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">8</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">9</div>
-<div class="p-3 rounded-xl bg-primary text-on-primary font-semibold shadow-md">10</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">11</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">12</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">13</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">14</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">15</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">16</div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)] flex flex-col items-center"><span class="font-semibold">17</span><span class="w-1 h-1 rounded-full bg-primary mt-1"></span></div>
-<div class="p-3 rounded-xl bg-surface text-on-surface shadow-[2px_2px_4px_rgba(0,0,0,0.04),-2px_-2px_4px_rgba(255,255,255,0.6)]">18</div>
-</div>
-</div>
-</div>
-<!-- TAB 7: PAYMENTS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-payments">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Payments &amp; Billing</h2>
-<p class="text-sm text-on-surface-variant">Review your coaching program financial summaries and invoices.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-3">
-<span class="text-xs text-on-surface-variant font-medium">Current Program</span>
-<h3 class="font-headline font-semibold text-lg text-on-surface">Executive Leadership Coaching Tier 2</h3>
-<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
-<span class="text-xs text-on-surface-variant">Amount Paid: <strong class="text-on-surface">â‚¹1,20,000</strong></span>
-<span class="text-xs text-primary font-semibold">Fully Active</span>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-3">
-<span class="text-xs text-on-surface-variant font-medium">Next Scheduled Payment</span>
-<h3 class="font-headline font-semibold text-lg text-on-surface">â‚¹30,000 due Nov 01, 2024</h3>
-<div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
-<span class="text-xs text-on-surface-variant">Auto-debit enabled</span>
-<button class="text-xs font-semibold text-primary hover:underline">Manage Payment Method</button>
-</div>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Payment History</h3>
-<div class="overflow-x-auto">
-<table class="w-full text-left text-sm text-on-surface">
-<thead class="text-xs text-on-surface-variant uppercase border-b border-outline-variant/20">
-<tr>
-<th class="pb-3 font-semibold">Invoice ID</th>
-<th class="pb-3 font-semibold">Date</th>
-<th class="pb-3 font-semibold">Amount</th>
-<th class="pb-3 font-semibold">Status</th>
-<th class="pb-3 font-semibold text-right">Actions</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant/10">
-<tr>
-<td class="py-4 font-medium">INV-2024-001</td>
-<td class="py-4 text-on-surface-variant">Sep 01, 2024</td>
-<td class="py-4 text-on-surface-variant">â‚¹60,000</td>
-<td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container text-on-primary-container">Paid</span></td>
-<td class="py-4 text-right"><button class="text-xs text-primary font-semibold hover:underline">Download Invoice</button></td>
-</tr>
-<tr>
-<td class="py-4 font-medium">INV-2024-002</td>
-<td class="py-4 text-on-surface-variant">Aug 01, 2024</td>
-<td class="py-4 text-on-surface-variant">â‚¹60,000</td>
-<td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-container text-on-primary-container">Paid</span></td>
-<td class="py-4 text-right"><button class="text-xs text-primary font-semibold hover:underline">Download Invoice</button></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<!-- TAB 8: NOTIFICATIONS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-notifications">
-<div class="flex items-center justify-between">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Notifications</h2>
-<p class="text-sm text-on-surface-variant">Stay updated with sessions, goals, and coach feedback.</p>
-</div>
-<button class="text-xs text-primary font-semibold hover:underline">Mark all as read</button>
-</div>
-<div class="flex flex-col gap-4">
-<div class="p-4 rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.06),-6px_-6px_12px_rgba(255,255,255,0.7)] flex items-start gap-4">
-<span class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
-<div class="flex-1">
-<div class="flex justify-between">
-<h4 class="text-sm font-semibold text-on-surface">Session Reminder</h4>
-<span class="text-[10px] text-outline">10m ago</span>
-</div>
-<p class="text-xs text-on-surface-variant mt-1">Your session with Dr. Elena Vance begins in 2 hours.</p>
-</div>
-</div>
-<div class="p-4 rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.06),-6px_-6px_12px_rgba(255,255,255,0.7)] flex items-start gap-4">
-<span class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
-<div class="flex-1">
-<div class="flex justify-between">
-<h4 class="text-sm font-semibold text-on-surface">Coach Note Added</h4>
-<span class="text-[10px] text-outline">Yesterday</span>
-</div>
-<p class="text-xs text-on-surface-variant mt-1">Dr. Elena Vance left feedback on your delegation framework goal.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- TAB 9: PROFILE & SETTINGS -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-settings">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Profile &amp; Settings</h2>
-<p class="text-sm text-on-surface-variant">Manage your account preferences, password, and system configurations.</p>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Personal Information</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-xs font-semibold text-on-surface-variant">Full Name</label>
-<input class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-sm outline-none text-on-surface" type="text" value="Alex Mercer"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-xs font-semibold text-on-surface-variant">Email Address</label>
-<input class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-sm outline-none text-on-surface" type="email" value="alex.mercer@enterprise.com"/>
-</div>
-</div>
-<button class="self-start px-5 py-2.5 rounded-xl bg-primary text-on-primary font-semibold text-sm shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.5)]">Save Changes</button>
-</div>
-</div>
-<!-- TAB 10: SUPPORT -->
-<div class="tab-content hidden flex flex-col gap-8" id="tab-support">
-<div>
-<h2 class="text-xl font-headline font-semibold text-on-surface">Support Center</h2>
-<p class="text-sm text-on-surface-variant">Get assistance with coaching sessions, technical queries, or billing.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6">
-<h3 class="font-headline font-semibold text-base text-on-surface">Submit an Inquiry</h3>
-<div class="flex flex-col gap-4">
-<div class="flex flex-col gap-2">
-<label class="text-xs font-semibold text-on-surface-variant">Category</label>
-<select class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-sm outline-none text-on-surface">
-<option>Coaching Sessions</option>
-<option>Account &amp; Billing</option>
-<option>Assessments</option>
-<option>Technical Support</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-xs font-semibold text-on-surface-variant">Message</label>
-<textarea class="bg-surface p-4 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-sm outline-none text-on-surface" placeholder="How can we assist your leadership journey?" rows="4"></textarea>
-</div>
-<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-semibold text-sm shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.5)]">Send Message</button>
-</div>
-</div>
-<div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6 justify-center text-center">
-<span class="material-symbols-outlined text-primary text-4xl">support_agent</span>
-<h3 class="font-headline font-semibold text-base text-on-surface">Direct Support Concierge</h3>
-<p class="text-xs text-on-surface-variant">Our executive support team is available Mon-Fri, 9am - 6pm EST.</p>
-<a class="text-sm font-semibold text-primary hover:underline" href="mailto:support@elevateleadership.com">support@elevateleadership.com</a>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
-<script>
-  function switchTab(targetId) {
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-    const target = document.getElementById('tab-' + targetId);
-    if (target) target.classList.remove('hidden');
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="goals" onclick="switchTab('goals')">
+            <span class="material-symbols-outlined text-[20px]">flag</span>
+            <span>My Goals</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="progress" onclick="switchTab('progress')">
+            <span class="material-symbols-outlined text-[20px]">monitoring</span>
+            <span>My Progress</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="assessments" onclick="switchTab('assessments')">
+            <span class="material-symbols-outlined text-[20px]">quiz</span>
+            <span>Assessments</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="calendar" onclick="switchTab('calendar')">
+            <span class="material-symbols-outlined text-[20px]">event_note</span>
+            <span>Calendar</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="payments" onclick="switchTab('payments')">
+            <span class="material-symbols-outlined text-[20px]">payments</span>
+            <span>Payments</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="notifications" onclick="switchTab('notifications')">
+            <span class="material-symbols-outlined text-[20px]">notifications</span>
+            <span>Notifications</span>
+            <span class="ml-auto bg-primary text-white text-[11px] px-2 py-0.5 rounded-full font-semibold">3</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="settings" onclick="switchTab('settings')">
+            <span class="material-symbols-outlined text-[20px]">settings</span>
+            <span>Profile &amp; Settings</span>
+          </button>
+          <button class="sidebar-link flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all text-on-surface-variant hover:text-on-surface text-sm" data-target="support" onclick="switchTab('support')">
+            <span class="material-symbols-outlined text-[20px]">support_agent</span>
+            <span>Support</span>
+          </button>
+        </nav>
+      </div>
 
-    document.querySelectorAll('.sidebar-link').forEach(btn => {
-      btn.classList.remove('bg-surface', 'shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)]', 'text-on-surface', 'font-semibold');
-      btn.classList.add('text-on-surface-variant');
-      if(btn.getAttribute('data-target') === targetId) {
-        btn.classList.add('bg-surface', 'shadow-[inset_4px_4px_8px_rgba(0,0,0,0.06),inset_-4px_-4px_8px_rgba(255,255,255,0.5)]', 'text-on-surface', 'font-semibold');
-        btn.classList.remove('text-on-surface-variant');
-      }
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+      <!-- Client Profile Desktop Bottom -->
+      <div class="pt-5 border-t border-outline-variant/20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img alt="Alex Mercer" class="w-9 h-9 rounded-xl object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfpurC3ZEyFe1_TlEAnkODtOhG8gyQLwWi2_4eu3wsXyPGaASMFIcf8ksRPCFi42_wIJ1pTeuCTUBgzENKDHwnynI4ZW0u05VcakYjmmy4HngzcV01nohv8iyC2J49AdtG95wH-Hwb9HBJVduC6U4bAeuWRDkfgrdHmCMDFc76d2z96pN1z7wjNnzzPkys0yWIngcBV4q44W4O8_i2dE8tZrbEiP42Hz2uCQOV4ryp2XdqyIhIigVi"/>
+          <div>
+            <h4 class="text-xs font-semibold text-on-surface">Alex Mercer</h4>
+            <p class="text-[10px] text-on-surface-variant">VP Engineering</p>
+          </div>
+        </div>
+        <a href="client_login.html" class="p-2 rounded-xl bg-surface shadow-[2px_2px_4px_rgba(0,0,0,0.06),-2px_-2px_4px_rgba(255,255,255,0.6)] text-on-surface-variant hover:text-primary transition-colors" title="Log Out">
+          <span class="material-symbols-outlined text-[16px]">logout</span>
+        </a>
+      </div>
+    </aside>
 
-  function toggleRTL() {
-    const html = document.documentElement;
-    if (html.getAttribute('dir') === 'rtl') {
-      html.setAttribute('dir', 'ltr');
-    } else {
-      html.setAttribute('dir', 'rtl');
-    }
-  }
+    <!-- Main Content Area: Responsive across 360px, 768px, 1024px+ (Issue Responsiveness 3) -->
+    <main class="flex-1 min-w-0 w-full p-4 sm:p-6 lg:p-8 xl:p-10 overflow-x-hidden">
+      
+      <!-- Top Header Summary Banner -->
+      <div class="mb-6 sm:mb-8 p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-primary font-semibold">Executive Dashboard</span>
+          <h1 class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface mt-1">Good morning, Alex.</h1>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Your leadership development journey is progressing exceptionally well this quarter.</p>
+        </div>
+        <div class="flex items-center gap-3 flex-wrap">
+          <div class="relative flex-1 sm:flex-initial">
+            <input class="bg-surface py-2 px-3 sm:py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-xs sm:text-sm outline-none text-on-surface placeholder:text-outline w-full sm:w-48 lg:w-60 ltr:pr-8 rtl:pl-8" placeholder="Search insights..." type="text"/>
+            <span class="material-symbols-outlined absolute ltr:right-2.5 rtl:left-2.5 top-2 sm:top-2.5 text-outline text-[16px] sm:text-[18px]">search</span>
+          </div>
+        </div>
+      </div>
 
-  function openBookingModal() {
-    switchTab('sessions');
-    alert('Booking interface initialized. Select your preferred coach and time slot.');
-  }
-</script></main><script src="app.js"></script></body></html>
+      <!-- TAB 1: OVERVIEW -->
+      <div class="tab-content flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-overview">
+        
+        <!-- Next Session Banner -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-surface shadow-[8px_8px_16px_rgba(0,0,0,0.08),-8px_-8px_16px_rgba(255,255,255,0.8)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 relative overflow-hidden">
+          <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="flex flex-col gap-1.5 relative z-10">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+              <span class="text-xs uppercase font-semibold text-primary">Upcoming Milestone</span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-headline font-semibold text-on-surface">Executive Coaching &mdash; Strategic Alignment</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Tuesday, 10:00 AM with Dr. Elena Vance</p>
+          </div>
+          <button class="relative z-10 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2" onclick="switchTab('sessions')">
+            <span class="material-symbols-outlined text-[18px]">videocam</span>
+            <span>Join Session</span>
+          </button>
+        </div>
 
+        <!-- Development Snapshot Stats: Responsive Grid (Fix for 360px & 768px alignment) -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5 min-w-0">
+          <div class="col-span-2 sm:col-span-1 p-4 sm:p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2 min-w-0">
+            <span class="text-[11px] sm:text-xs text-on-surface-variant font-medium truncate">Overall Progress</span>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface">72%</span>
+              <span class="text-[11px] text-primary font-semibold">+8% mo</span>
+            </div>
+            <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.1)]">
+              <div class="bg-primary h-full rounded-full" style="width: 72%;"></div>
+            </div>
+          </div>
+          
+          <div class="p-4 sm:p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2 min-w-0">
+            <span class="text-[11px] sm:text-xs text-on-surface-variant font-medium truncate">Active Goals</span>
+            <span class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface">4</span>
+            <span class="text-[11px] text-on-surface-variant truncate">2 due this Q</span>
+          </div>
 
+          <div class="p-4 sm:p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2 min-w-0">
+            <span class="text-[11px] sm:text-xs text-on-surface-variant font-medium truncate">Completed Goals</span>
+            <span class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface">8</span>
+            <span class="text-[11px] text-primary font-semibold truncate">Target exceeded</span>
+          </div>
 
+          <div class="p-4 sm:p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-2 min-w-0">
+            <span class="text-[11px] sm:text-xs text-on-surface-variant font-medium truncate">Sessions Done</span>
+            <span class="text-2xl sm:text-3xl font-headline font-semibold text-on-surface">12</span>
+            <span class="text-[11px] text-on-surface-variant truncate">4 remaining</span>
+          </div>
 
+          <div class="col-span-2 md:col-span-1 p-4 sm:p-5 rounded-2xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.08),-6px_-6px_12px_rgba(255,255,255,0.7)] flex flex-col gap-1 min-w-0">
+            <span class="text-[11px] sm:text-xs text-on-surface-variant font-medium truncate">Next Assessment</span>
+            <span class="text-lg sm:text-xl font-headline font-semibold text-on-surface mt-1">Oct 14</span>
+            <span class="text-[11px] text-primary font-semibold truncate">360&deg; Review</span>
+          </div>
+        </div>
 
+        <!-- Bento Grid: Current Goals & Recent Activity (Alignment Fix) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 min-w-0">
+          
+          <!-- Current Goals Overview -->
+          <div class="lg:col-span-2 p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-5 min-w-0">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline font-semibold text-base sm:text-lg text-on-surface">Current Active Goals</h3>
+              <button class="text-xs text-primary font-semibold hover:underline" onclick="switchTab('goals')">View All Goals</button>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-3 min-w-0">
+                <div class="flex items-start justify-between gap-2">
+                  <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Scale Engineering Organization to 150+</h4>
+                  <span class="text-xs font-semibold text-primary flex-shrink-0">85%</span>
+                </div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+                </div>
+                <p class="text-[11px] sm:text-xs text-on-surface-variant">Target: Q4 Review &bull; Coach note: Excellent hiring velocity achieved.</p>
+              </div>
 
+              <div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-3 min-w-0">
+                <div class="flex items-start justify-between gap-2">
+                  <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Cross-functional Executive Presence &amp; Influence</h4>
+                  <span class="text-xs font-semibold text-primary flex-shrink-0">60%</span>
+                </div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 60%;"></div>
+                </div>
+                <p class="text-[11px] sm:text-xs text-on-surface-variant">Target: Nov 30 &bull; Focus on board-level presentation narrative.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity Timeline (Cleaned Mojibake & Proper Alignment) -->
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-5 min-w-0">
+            <h3 class="font-headline font-semibold text-base sm:text-lg text-on-surface">Recent Activity</h3>
+            <div class="flex flex-col gap-5 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/30">
+              
+              <div class="flex items-start gap-3.5 relative">
+                <div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs z-10 shadow-md flex-shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Goal Milestone Achieved</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant">Completed Q3 Hiring Plan</p>
+                  <span class="text-[10px] text-outline mt-0.5 block">Yesterday, 4:15 PM</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 relative">
+                <div class="w-6 h-6 rounded-full bg-surface-container text-primary flex items-center justify-center text-xs z-10 shadow-sm flex-shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">chat</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Coach Session Note Added</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant">Dr. Elena Vance uploaded session notes.</p>
+                  <span class="text-[10px] text-outline mt-0.5 block">Oct 12, 11:30 AM</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 relative">
+                <div class="w-6 h-6 rounded-full bg-surface-container text-primary flex items-center justify-center text-xs z-10 shadow-sm flex-shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">bar_chart</span>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Assessment Review</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant">Strategic thinking capability rated +12%.</p>
+                  <span class="text-[10px] text-outline mt-0.5 block">Oct 08, 2:00 PM</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: MY SESSIONS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-sessions">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-headline font-semibold text-on-surface">Coaching Sessions</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Manage upcoming appointments or book new strategic check-ins.</p>
+          </div>
+          <button class="self-start sm:self-auto px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm shadow-md" onclick="openBookingModal()">Book Session</button>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6 min-w-0">
+          <h3 class="font-headline font-semibold text-base text-on-surface">Upcoming Sessions</h3>
+          <div class="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
+            <table class="w-full text-left text-xs sm:text-sm text-on-surface min-w-[540px]">
+              <thead class="text-xs text-on-surface-variant uppercase border-b border-outline-variant/20">
+                <tr>
+                  <th class="pb-3 font-semibold">Session Type</th>
+                  <th class="pb-3 font-semibold">Coach</th>
+                  <th class="pb-3 font-semibold">Date &amp; Time</th>
+                  <th class="pb-3 font-semibold">Status</th>
+                  <th class="pb-3 font-semibold text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr>
+                  <td class="py-4 font-medium">Strategic Alignment</td>
+                  <td class="py-4 text-on-surface-variant">Dr. Elena Vance</td>
+                  <td class="py-4 text-on-surface-variant">Oct 17, 2024 &bull; 10:00 AM</td>
+                  <td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">Confirmed</span></td>
+                  <td class="py-4 text-right">
+                    <div class="flex items-center justify-end gap-2">
+                      <button class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-semibold shadow-sm">Join</button>
+                      <button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-sm">Reschedule</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 font-medium">Leadership Deep Dive</td>
+                  <td class="py-4 text-on-surface-variant">Marcus Sterling</td>
+                  <td class="py-4 text-on-surface-variant">Oct 24, 2024 &bull; 02:00 PM</td>
+                  <td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary/15 text-on-surface">Scheduled</span></td>
+                  <td class="py-4 text-right">
+                    <div class="flex items-center justify-end gap-2">
+                      <button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant text-xs shadow-sm">Reschedule</button>
+                      <button class="px-3 py-1.5 rounded-lg bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400 text-xs font-semibold">Cancel</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4 min-w-0">
+          <h3 class="font-headline font-semibold text-base text-on-surface">Past Sessions &amp; Coach Notes</h3>
+          <div class="p-4 rounded-xl bg-surface shadow-[inset_4px_4px_8px_rgba(0,0,0,0.04),inset_-4px_-4px_8px_rgba(255,255,255,0.6)] flex flex-col gap-2">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h4 class="text-sm font-semibold text-on-surface">Stakeholder Management Framework</h4>
+              <span class="text-xs text-on-surface-variant">Oct 10, 2024 &bull; Dr. Elena Vance</span>
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Discussed methods for aligning disparate engineering teams with product milestones. Alex demonstrated strong self-awareness regarding delegation bottlenecks.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: MY GOALS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-goals">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-headline font-semibold text-on-surface">Development Goals</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Track your active objectives and milestone achievements.</p>
+          </div>
+          <button class="self-start sm:self-auto px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm shadow-md">+ New Goal</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-w-0">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">Active</span>
+              <span class="text-xs text-on-surface-variant">Target: Dec 15, 2024</span>
+            </div>
+            <h3 class="font-headline font-semibold text-base text-on-surface">Scale Engineering Organization to 150+</h3>
+            <p class="text-xs text-on-surface-variant">Recruit key departmental leads and restructure reporting lines for optimal cross-team velocity.</p>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex justify-between text-xs font-semibold"><span>Progress</span><span>85%</span></div>
+              <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                <div class="bg-primary h-full rounded-full" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant">Coach: Excellent velocity</span>
+              <button class="text-xs font-semibold text-primary hover:underline">Update</button>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">Active</span>
+              <span class="text-xs text-on-surface-variant">Target: Nov 30, 2024</span>
+            </div>
+            <h3 class="font-headline font-semibold text-base text-on-surface">Cross-functional Executive Presence</h3>
+            <p class="text-xs text-on-surface-variant">Enhance board-level communication and strategic storytelling for product launches.</p>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex justify-between text-xs font-semibold"><span>Progress</span><span>60%</span></div>
+              <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+                <div class="bg-primary h-full rounded-full" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant">Coach: Focus on brevity</span>
+              <button class="text-xs font-semibold text-primary hover:underline">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: MY PROGRESS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-progress">
+        <div>
+          <h2 class="text-xl font-headline font-semibold text-on-surface">Leadership Progress &amp; Capabilities</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant">Detailed breakdown of competency metrics across your executive journey.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 min-w-0">
+          <div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col items-center justify-center text-center gap-4">
+            <h3 class="font-headline font-semibold text-base text-on-surface">Overall Development Index</h3>
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-surface shadow-[inset_6px_6px_12px_rgba(0,0,0,0.08),inset_-6px_-6px_12px_rgba(255,255,255,0.6)] flex items-center justify-center flex-col">
+              <span class="text-3xl sm:text-4xl font-headline font-semibold text-primary">72%</span>
+              <span class="text-[11px] sm:text-xs text-on-surface-variant mt-1">Advanced Tier</span>
+            </div>
+            <p class="text-xs text-on-surface-variant">Calculated from 360 evaluations, goal velocity, and coach feedback.</p>
+          </div>
+
+          <div class="lg:col-span-2 p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-5 min-w-0">
+            <h3 class="font-headline font-semibold text-base text-on-surface">Capability Breakdown</h3>
+            <div class="flex flex-col gap-3.5">
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between text-xs font-semibold text-on-surface"><span>Strategic Thinking</span><span>82%</span></div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 82%;"></div></div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between text-xs font-semibold text-on-surface"><span>Communication</span><span>76%</span></div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 76%;"></div></div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between text-xs font-semibold text-on-surface"><span>Executive Presence</span><span>78%</span></div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 78%;"></div></div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between text-xs font-semibold text-on-surface"><span>Delegation</span><span>61%</span></div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 61%;"></div></div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between text-xs font-semibold text-on-surface"><span>Influence</span><span>69%</span></div>
+                <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 69%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-2">
+          <p class="text-xs sm:text-sm text-on-surface italic">&ldquo;Alex has shown remarkable growth in strategic thinking and visionary alignment. Continued focus on delegation will unlock even higher organizational scale.&rdquo;</p>
+          <span class="text-xs font-semibold text-on-surface-variant">&mdash; Dr. Elena Vance, Lead Executive Coach</span>
+        </div>
+      </div>
+
+      <!-- TAB 5: ASSESSMENTS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-assessments">
+        <div>
+          <h2 class="text-xl font-headline font-semibold text-on-surface">Leadership Assessments</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant">Review your completed 360&deg; evaluations and upcoming assessment milestones.</p>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-5 min-w-0">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span class="text-xs font-semibold text-primary">Completed Sept 12, 2026</span>
+              <h3 class="font-headline font-semibold text-base sm:text-lg text-on-surface mt-0.5">360&deg; Comprehensive Leadership Review</h3>
+            </div>
+            <button class="self-start sm:self-auto px-4 py-2 rounded-xl bg-primary text-white text-xs font-semibold shadow-md">View Full Report</button>
+          </div>
+          <p class="text-xs text-on-surface-variant">Evaluated by 12 peers, direct reports, and executive stakeholders across 5 key capability pillars.</p>
+        </div>
+      </div>
+
+      <!-- TAB 6: CALENDAR -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-calendar">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-headline font-semibold text-on-surface">Schedule &amp; Calendar</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Interactive agenda of coaching sessions, goal milestones, and reviews.</p>
+          </div>
+          <div class="flex gap-2">
+            <button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface text-xs font-semibold shadow-sm">Month</button>
+            <button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant text-xs">Week</button>
+            <button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant text-xs">Today</button>
+          </div>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4 min-w-0 overflow-x-auto">
+          <div class="grid grid-cols-7 gap-1 sm:gap-2 text-center text-[11px] sm:text-xs font-semibold text-on-surface-variant pb-2 border-b border-outline-variant/20 min-w-[320px]">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="grid grid-cols-7 gap-1.5 sm:gap-3 text-center text-xs sm:text-sm min-w-[320px]">
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-outline">28</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-outline">29</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-outline">30</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">1</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">2</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">3</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">4</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">5</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">6</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">7</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">8</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">9</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-primary text-white font-semibold shadow-md">10</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">11</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">12</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">13</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">14</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">15</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">16</div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs flex flex-col items-center">
+              <span class="font-semibold">17</span>
+              <span class="w-1 h-1 rounded-full bg-primary mt-0.5"></span>
+            </div>
+            <div class="p-2 sm:p-3 rounded-xl bg-surface text-on-surface shadow-xs">18</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 7: PAYMENTS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-payments">
+        <div>
+          <h2 class="text-xl font-headline font-semibold text-on-surface">Payments &amp; Billing</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant">Review your coaching program financial summaries and invoices.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-w-0">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-3">
+            <span class="text-xs text-on-surface-variant font-medium">Current Program</span>
+            <h3 class="font-headline font-semibold text-base sm:text-lg text-on-surface">Executive Leadership Coaching Tier 2</h3>
+            <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant">Amount Paid: <strong class="text-on-surface">&#8377;1,20,000</strong></span>
+              <span class="text-xs text-primary font-semibold">Fully Active</span>
+            </div>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-3">
+            <span class="text-xs text-on-surface-variant font-medium">Next Scheduled Payment</span>
+            <h3 class="font-headline font-semibold text-base sm:text-lg text-on-surface">&#8377;30,000 due Nov 01, 2024</h3>
+            <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant">Auto-debit enabled</span>
+              <button class="text-xs font-semibold text-primary hover:underline">Manage</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6 min-w-0">
+          <h3 class="font-headline font-semibold text-base text-on-surface">Payment History</h3>
+          <div class="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
+            <table class="w-full text-left text-xs sm:text-sm text-on-surface min-w-[500px]">
+              <thead class="text-xs text-on-surface-variant uppercase border-b border-outline-variant/20">
+                <tr>
+                  <th class="pb-3 font-semibold">Invoice ID</th>
+                  <th class="pb-3 font-semibold">Date</th>
+                  <th class="pb-3 font-semibold">Amount</th>
+                  <th class="pb-3 font-semibold">Status</th>
+                  <th class="pb-3 font-semibold text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr>
+                  <td class="py-4 font-medium">INV-2024-001</td>
+                  <td class="py-4 text-on-surface-variant">Sep 01, 2024</td>
+                  <td class="py-4 text-on-surface-variant">&#8377;60,000</td>
+                  <td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">Paid</span></td>
+                  <td class="py-4 text-right"><button class="text-xs text-primary font-semibold hover:underline">Download</button></td>
+                </tr>
+                <tr>
+                  <td class="py-4 font-medium">INV-2024-002</td>
+                  <td class="py-4 text-on-surface-variant">Aug 01, 2024</td>
+                  <td class="py-4 text-on-surface-variant">&#8377;60,000</td>
+                  <td class="py-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">Paid</span></td>
+                  <td class="py-4 text-right"><button class="text-xs text-primary font-semibold hover:underline">Download</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 8: NOTIFICATIONS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-notifications">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-xl font-headline font-semibold text-on-surface">Notifications</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">Stay updated with sessions, goals, and coach feedback.</p>
+          </div>
+          <button class="text-xs text-primary font-semibold hover:underline">Mark all read</button>
+        </div>
+
+        <div class="flex flex-col gap-4 min-w-0">
+          <div class="p-4 rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.06),-6px_-6px_12px_rgba(255,255,255,0.7)] flex items-start gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-baseline">
+                <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Session Reminder</h4>
+                <span class="text-[10px] text-outline">10m ago</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-0.5">Your session with Dr. Elena Vance begins in 2 hours.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface shadow-[6px_6px_12px_rgba(0,0,0,0.06),-6px_-6px_12px_rgba(255,255,255,0.7)] flex items-start gap-3.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-baseline">
+                <h4 class="text-xs sm:text-sm font-semibold text-on-surface">Coach Note Added</h4>
+                <span class="text-[10px] text-outline">Yesterday</span>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-0.5">Dr. Elena Vance left feedback on your delegation framework goal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 9: PROFILE & SETTINGS -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-settings">
+        <div>
+          <h2 class="text-xl font-headline font-semibold text-on-surface">Profile &amp; Settings</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant">Manage your account preferences, password, and configurations.</p>
+        </div>
+
+        <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-6 min-w-0">
+          <h3 class="font-headline font-semibold text-base text-on-surface">Personal Information</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-semibold text-on-surface-variant">Full Name</label>
+              <input class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-xs sm:text-sm outline-none text-on-surface" type="text" value="Alex Mercer"/>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-xs font-semibold text-on-surface-variant">Email Address</label>
+              <input class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-xs sm:text-sm outline-none text-on-surface" type="email" value="alex.mercer@enterprise.com"/>
+            </div>
+          </div>
+          <button class="self-start px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm shadow-md">Save Changes</button>
+        </div>
+      </div>
+
+      <!-- TAB 10: SUPPORT -->
+      <div class="tab-content hidden flex flex-col gap-6 sm:gap-8 min-w-0" id="tab-support">
+        <div>
+          <h2 class="text-xl font-headline font-semibold text-on-surface">Support Center</h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant">Get assistance with coaching sessions, technical queries, or billing.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 min-w-0">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4">
+            <h3 class="font-headline font-semibold text-base text-on-surface">Submit an Inquiry</h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold text-on-surface-variant">Category</label>
+                <select class="bg-surface px-4 py-2.5 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-xs sm:text-sm outline-none text-on-surface">
+                  <option>Coaching Sessions</option>
+                  <option>Account &amp; Billing</option>
+                  <option>Assessments</option>
+                  <option>Technical Support</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs font-semibold text-on-surface-variant">Message</label>
+                <textarea class="bg-surface p-4 rounded-xl shadow-[inset_3px_3px_6px_rgba(0,0,0,0.06),inset_-3px_-3px_6px_rgba(255,255,255,0.6)] text-xs sm:text-sm outline-none text-on-surface" placeholder="How can we assist your leadership journey?" rows="4"></textarea>
+              </div>
+              <button class="self-start px-5 py-2.5 rounded-xl bg-primary text-white font-semibold text-xs sm:text-sm shadow-md">Send Message</button>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface shadow-[6px_6px_14px_rgba(0,0,0,0.06),-6px_-6px_14px_rgba(255,255,255,0.7)] flex flex-col gap-4 justify-center text-center">
+            <span class="material-symbols-outlined text-primary text-4xl mx-auto">support_agent</span>
+            <h3 class="font-headline font-semibold text-base text-on-surface">Direct Support Concierge</h3>
+            <p class="text-xs text-on-surface-variant">Our executive support team is available Mon-Fri, 9am - 6pm EST.</p>
+            <a class="text-xs sm:text-sm font-semibold text-primary hover:underline" href="mailto:support@elevateleadership.com">support@elevateleadership.com</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
